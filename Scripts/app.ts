@@ -89,23 +89,23 @@ module core {
 
 
         buttonDice2 = new objectsButton.ButtonAd(image2,
-            buttonDice1.getWidth() + 10 + buttonDice1.x, buttonDice1.y, false);
+            300, 40, false);
         stage.addChild(buttonDice2);
 
 
-        buttonRoll = new objectsButton.ButtonAd("../Assets/images/rollButton.png", buttonDice1.x + buttonDice1.getWidth() - 70,
-            buttonDice1.y + 300, false);
+        buttonRoll = new objectsButton.ButtonAd("../Assets/images/rollButton.png", 230,
+            330, false);
         stage.addChild(buttonRoll);
 
         buttonRoll.on("click", buttonRoll_clicked);
 
 
         labelDice1 = new objectsLabel.LabelAd(randomnumber1, "20px Consolas",
-            "#000000", buttonDice1.x + buttonDice1.getWidth() * 0.35, buttonDice1.y + 210, false);
+            "#000000", 180, 250, false);
 
         stage.addChild(labelDice1);
         labelDice2 = new objectsLabel.LabelAd(randomnumber2, "20px Consolas",
-            "#000000", buttonDice2.x + buttonDice2.getWidth() * 0.35, buttonDice2.y + 210, false);
+            "#000000", 400, 250, false);
 
         stage.addChild(labelDice2);
     }
