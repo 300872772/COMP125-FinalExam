@@ -32,20 +32,7 @@ module core {
 
 
 
-    /**
-     * This function is app entry function
-     * 
-     * @method init
-     * @return {void} 
-     */
-    function init(): void {
-        canvas = document.getElementById("canvas");
-        stage = new createjs.Stage(canvas);
-        stage.enableMouseOver(20);
-        createjs.Ticker.framerate = 60;
-        createjs.Ticker.on("tick", gameLoop);
-        main("../Assets/images/blank.png", "../Assets/images/blank.png");
-    }
+
 
     /**
      * This function is app entry function
@@ -135,7 +122,20 @@ module core {
         //main(imagesForDice1,imagesForDice1);
         //stage.update();
     }
-
+    /**
+     * This function is app entry function
+     * 
+     * @method init
+     * @return {void} 
+     */
+    function init(): void {
+        canvas = document.getElementById("canvas");
+        stage = new createjs.Stage(canvas);
+        stage.enableMouseOver(20);
+        createjs.Ticker.framerate = 60;
+        createjs.Ticker.on("tick", gameLoop);
+        main("../Assets/images/blank.png", "../Assets/images/blank.png");
+    }
 
     window.addEventListener("load", init);
 
